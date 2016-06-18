@@ -48,156 +48,145 @@
 
     	<!-- Page Content -->
     	<div class="container">
-
     		<div class="row">
     			<!--  Left Column.. Create a form with post.. !-->
     			<div class="col-md-3">
     				<form onsubmit="usernameSubmitHandler();return false;">
-                <!-- <p class="lead">"username"</p>
-                !-->
-                <input class="lead" type="text" placeholder="Username"/>
-                <input class="lead" type="submit" value="Go"/>
-            </form>
-            <div class="list-group">
-                    <!--
-                    <a href="#" class="list-group-item">Bought</a>
-                    <a href="#" class="list-group-item">Sold</a>
+                    <!-- <p class="lead">"username"</p>
                     !-->
-                    <button class="list-group-item">Bought</button>
-                    <button class="list-group-item">Sold</button>
-                </div>
+                    <input class="lead" type="text" placeholder="Username"/>
+                    <input class="lead" type="submit" value="Go"/>
+                </form>
+            <div class="list-group" id="bought_and_sold">
+                <!--
+                <a href="#" class="list-group-item">Bought</a>
+                <a href="#" class="list-group-item">Sold</a>
+                !-->
+                <button class="list-group-item" id="boughtButton">Bought</button>
+                <button class="list-group-item" id="soldButton">Sold</button>
             </div>
+        </div>
 
             <!-- Carousel and Reccomendations !-->
-            <div class="col-md-9">
-
-            	<div class="row carousel-holder">
-
-            		<div class="col-md-12">
-            			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-            				<ol class="carousel-indicators">
-            					<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-            					<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-            					<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-            				</ol>
-            				<div class="carousel-inner" id="carousel-inner">
-
-                            	
-
-									<div class="item active " id="topad">
-										<div class="col-sm-4 col-lg-4 col-md-4">
-											<div class="thumbnail">
-												<img src="http://placehold.it/320x150" alt="" id="mobileAdImage">
-												<div class="caption">
-													<h4 class="pull-right mobileAdPrice" >$24.99</h4>
-													<h4><a href="#" class="mobileAdTitle">First Product</a>
-													</h4>
-													<p id="mobileAdDescription">See more snippets like this online store item at.</p>
-												</div>
-												<div class="ratings">
-													<p class="pull-right mobileAdViews" >Views : </p>
-													<p>
-														<span class="glyphicon glyphicon-star"></span>
-														<span class="glyphicon glyphicon-star"></span>
-														<span class="glyphicon glyphicon-star"></span>
-														<span class="glyphicon glyphicon-star"></span>
-														<span class="glyphicon glyphicon-star"></span>
-													</p>
-												</div>
-											</div>
+        <div class="col-md-9 contents">
+            <div class="row carousel-holder">
+           		<div class="col-md-12">
+           			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+           				<ol class="carousel-indicators">
+           					<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+           					<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+           					<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+           				</ol>
+           				<div class="carousel-inner" id="carousel-inner">
+                            <div class="item active">
+								<div class="col-sm-4 col-lg-4 col-md-4">
+									<div class="thumbnail">
+										<img src="" alt="" >
+										<div class="caption">
+											<h4 class="pull-right mobileAdPrice" >$24.99</h4>
+                                            <br>
+					      					<h4><a href="#" class="mobileAdTitle">First Product</a>
+											</h4>
+											<p>See more snippets like this online store item at.</p>
 										</div>
-									</div>
-
-									<div class="item">
-										<div class="col-sm-4 col-lg-4 col-md-4">
-											<div class="thumbnail">
-												<img src="http://placehold.it/320x150" alt="" id="musicClassAdImage">
-												<div class="caption">
-													<h4 class="pull-right" id="musicClassAdPrice">$24.99</h4>
-													<h4><a href="#" id="musicClassAdTitle">Second Product</a>
-													</h4>
-													<p id="musicClassAdDescription">See more snippets like this online store item at.</p>
-												</div>
-												<div class="ratings">
-													<p class="pull-right" id="#musicClassAdViews">Views : </p>
-													<p>
-														<span class="glyphicon glyphicon-star"></span>
-														<span class="glyphicon glyphicon-star"></span>
-														<span class="glyphicon glyphicon-star"></span>
-														<span class="glyphicon glyphicon-star"></span>
-														<span class="glyphicon glyphicon-star"></span>
-													</p>
-												</div>
-											</div>
+										<div class="ratings">
+											<p class="pull-left mobileAdViews" >Views : </p>
+											<p>
+												<button id="rec" class="pull-right recButton">More</button>
+											</p>
 										</div>
-									</div>
-
-									<div class="item">
-										<div class="col-sm-4 col-lg-4 col-md-4">
-											<div class="thumbnail">
-												<img src="http://placehold.it/320x150" alt="" id="educationAdImage">
-												<div class="caption">
-													<h4 class="pull-right" id="educationAdPrice">$24.99</h4>
-													<h4><a href="#" id="educationAdTitle">Third Product</a>
-													</h4>
-													<p id="educationAdDescription">See more snippets like this online store item at.</p>
-												</div>
-												<div class="ratings">
-													<p class="pull-right" id="educationAdViews">Views : </p>
-													<p>
-														<span class="glyphicon glyphicon-star"></span>
-														<span class="glyphicon glyphicon-star"></span>
-														<span class="glyphicon glyphicon-star"></span>
-														<span class="glyphicon glyphicon-star"></span>
-														<span class="glyphicon glyphicon-star"></span>
-													</p>
-												</div>
-											</div>
+								   </div>
+							    </div>
+    					     </div>
+                             
+							<div class="item">
+								<div class="col-sm-4 col-lg-4 col-md-4">
+									<div class="thumbnail">
+										<img src="" alt="">
+										<div class="caption">
+											<h4 class="pull-right">$24.99</h4>
+                                            <br>
+											<h4><a href="#">Second Product</a>
+											</h4>
+											<p>See more snippets like this online store item at.</p>
+										</div>
+										<div class="ratings">
+											<p class="pull-right">Views : </p>
+											<p>
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+											</p>
 										</div>
 									</div>
 								</div>
-
-								<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-									<span class="glyphicon glyphicon-chevron-left"></span>
-								</a>
-								<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-									<span class="glyphicon glyphicon-chevron-right"></span>
-								</a>
 							</div>
+							<div class="item">
+								<div class="col-sm-4 col-lg-4 col-md-4">
+									<div class="thumbnail">
+										<img src="" alt="">
+										<div class="caption">
+											<h4 class="pull-right">$24.99</h4>
+                                            <br>
+											<h4><a href="#">Third Product</a>
+											</h4>
+											<p>See more snippets like this online store item at.</p>
+										</div>
+										<div class="ratings">
+											<p class="pull-right">Views : </p>
+											<p>
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+                            
 						</div>
-
+						<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left"></span>
+						</a>
+						<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
 					</div>
+				</div>
+			</div>
+            <div class="row">
+            <!--
+            Add the reccommendations by JS Code
+            !-->
+                <div class="col-sm-4 col-lg-4 col-md-4">
+                    <div class="thumbnail">
+                	   <img src="" alt="">
+                	   <div class="caption">
+                	       <h4 class="pull-right"> </h4>
+                	       <h4><a href="#">recommended product1</a>
+                	       </h4>
+                	       <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+                        </div>
+                	    <div class="ratings">
+                            <p class="pull-right">15 reviews</p>
+                            <p>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
-					<div class="row">
-
-                	<!--
-                	Add the reccommendations by JS Code
-                	!-->
                 	<div class="col-sm-4 col-lg-4 col-md-4">
                 		<div class="thumbnail">
-                			<img src="http://placehold.it/320x150" alt="">
-                			<div class="caption">
-                				<h4 class="pull-right"> </h4>
-                				<h4><a href="#">recommended product1</a>
-                				</h4>
-                				<p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
-                			</div>
-                			<div class="ratings">
-                				<p class="pull-right">15 reviews</p>
-                				<p>
-                					<span class="glyphicon glyphicon-star"></span>
-                					<span class="glyphicon glyphicon-star"></span>
-                					<span class="glyphicon glyphicon-star"></span>
-                					<span class="glyphicon glyphicon-star"></span>
-                					<span class="glyphicon glyphicon-star"></span>
-                				</p>
-                			</div>
-                		</div>
-                	</div>
-
-                	<div class="col-sm-4 col-lg-4 col-md-4">
-                		<div class="thumbnail">
-                			<img src="http://placehold.it/320x150" alt="">
+                			<img src="" alt="">
                 			<div class="caption">
                 				<h4 class="pull-right"> </h4>
                 				<h4><a href="#">recommended product2</a>
@@ -219,7 +208,7 @@
 
                 	<div class="col-sm-4 col-lg-4 col-md-4">
                 		<div class="thumbnail">
-                			<img src="http://placehold.it/320x150" alt="">
+                			<img src="" alt="">
                 			<div class="caption">
                 				<h4 class="pull-right"></h4>
                 				<h4><a href="#">Recommended product 3</a>
@@ -241,7 +230,7 @@
 
                 	<div class="col-sm-4 col-lg-4 col-md-4">
                 		<div class="thumbnail">
-                			<img src="http://placehold.it/320x150" alt="">
+                			<img src="" alt="">
                 			<div class="caption">
                 				<h4 class="pull-right"></h4>
                 				<h4><a href="#">Fourth Product</a>
@@ -263,7 +252,7 @@
 
                 	<div class="col-sm-4 col-lg-4 col-md-4">
                 		<div class="thumbnail">
-                			<img src="http://placehold.it/320x150" alt="">
+                			<img src="" alt="">
                 			<div class="caption">
                 				<h4 class="pull-right"></h4>
                 				<h4><a href="#">Fifth Product</a>
@@ -313,6 +302,92 @@
 
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
+
+<script>
+
+function ad(id,price,description,title,views,image,glo_category){
+    this.id=id;
+    this.price=price;
+    this.description=description;
+    this.title=title;
+    this.views=views;
+    this.image=image;
+    this.glo_category=glo_category;
+
+}
+
+    // Function in ad class : to render
+ad.prototype.renderAsTopAd=function(){
+    // rendering...
+    itemRoot =$(".carousel-inner");
+    item = itemRoot[0].children[0];
+    itemClone = item.cloneNode(true);   //cloning topadtemplate
+    itemClone.children[0].children[0].children[0].attributes[0].value=this.image;
+    itemClone.children[0].children[0].children[1].children[0].innerHTML = "Rs " + this.price;
+    itemClone.children[0].children[0].children[1].children[2].innerHTML = this.title;
+    itemClone.children[0].children[0].children[1].children[3].innerHTML = this.description;
+    this.views = 20;
+    //moreButton = this.glo_category;
+    //itemClone.children[0].children[0].children[2].children[1].innerHTML = this.views;
+    itemRoot[0].appendChild(itemClone);
+    item.remove();
+    //in that clone you will set all params
+    //you will append this in carousel-inner
+    //$('.AdRecommendedButton').attr("data-catid",this.cgid);
+}
+
+// Initial page load hides.
+$("#bought_and_sold").hide();
+$(".contents").hide();
+// Set Button Listeners
+$("#boughtButton").click(boughtButtonClickedHandler);
+$("#soldButton").click(soldButtonClickedHandler);
+// Define Button Listeners
+
+function boughtButtonClickedHandler(){
+    $(".contents").show();
+    getAd(new ad,function(x){});
+}
+
+function soldButtonClickedHandler(){
+    getAd(new ad,function(x){});
+    $(".contents").show();
+}
+
+// Handler for form button.
+function usernameSubmitHandler(){
+    $("#bought_and_sold").show();
+    $(".contents").hide();
+}
+function getAd(advertisement,callback){
+    $.ajax({
+        url: "boughtAd.php",    // url of page from which content is reqd
+        type:'get',             // request is a get or post 
+        dataType:'text',        // expected response type is text
+        success:function(data){     // what to do when request succeeds. 'data' is the response data (for get)
+            ads = jQuery.parseJSON(data);
+            ads.forEach(function(adv){
+                v = jQuery.parseJSON(JSON.stringify(adv));
+                (new ad(v.id,v.price,v.description,v.title,v.views,v.image,v.glo_category)).renderAsTopAd();
+                $(".recButton")[0].attributes[0].value=v.glo_category;
+                alert($(".recButton")[0].attributes[0].value);
+            });      
+        }
+    });
+}
+
+$("#Mobile Phones").click(function(){
+    alert("specific listener alli ide");
+});
+
+$('.AdRecommendedButton').click(function(event){
+    $(event.target).attr('data-catid');
+
+
+});
+
+</script>
+
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
 <!--<script src='js/common.js'></script>!-->
